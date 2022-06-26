@@ -4,49 +4,93 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <title>expense tracker</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>Expense tracker</h2>
+   
     <div class="container">
-        <h4>Your Balance</h4>
-        <h1 id="balance">$0.00</h1>
+        <h1 class="expense-title">Expense Tracker</h1>
+           <!-- balance -->
+        <div class="balance">
+            <h1 id="balance">$0.00</h1>
+            <h4>Current Balance</h4>
+        </div>
+
+
+          <!-- income expense -->
         <div class="inc-exp-container">
-            <div>
+            <div class="income">
+                <h2 id="income">$0.00<i class="fa-solid fa-caret-up"></i></h2>
                 <h4>Income</h4>
-                <p id="money-plus" class="money-plus">
-                    +$0.00
-                </p>
             </div>
+            <div class="expense">
+                <h2 id="expense">$0.00<i class="fa-solid fa-caret-down"></i></h2>
+                <h4>Expense</h4>
+            </div>
+        </div>
+          <!-- history -->
+          <div class="history">
+            <h2 id="title-history">History</h2>
+            <ul class="history-box" id="list">
+
+
+                <li class="plus"><h4>Payment</h4>
+                    <span>+$100<i class="fa-solid fa-caret-up"></i>
+                        <i class="fas fa-trash-alt"></i>
+                    </span></li>
+
+
+                    <li class="minus"><h4>Payment</h4>
+                        <span>+$100<i class="fa-solid fa-caret-up"></i>
+                            <i class="fas fa-trash-alt"></i>
+                        </span></li>
+
+
+                        <li class="plus"><h4>Payment</h4>
+                            <span>+$100<i class="fa-solid fa-caret-up"></i>
+                                <i class="fas fa-trash-alt"></i>
+                            </span></li>
+
+                            <li class="minus"><h4>Payment</h4>
+                                <span>+$100<i class="fa-solid fa-caret-up"></i>
+                                    <i class="fas fa-trash-alt"></i>
+                                </span></li>
+
+                                <li class="plus"><h4>Payment</h4>
+                                    <span>+$100<i class="fa-solid fa-caret-up"></i>
+                                        <i class="fas fa-trash-alt"></i>
+                                    </span></li>
+
+                                    <li class="minus"><h4>Payment</h4>
+                                        <span>+$100<i class="fa-solid fa-caret-up"></i>
+                                            <i class="fas fa-trash-alt"></i>
+                                        </span></li>
         
-           <div>
-              <h4>Expense</h4>
-              <p id="money-minus" class="money-minus">-$0.00</p>
-           </div>
-       </div>
-       <h3>History</h3>
-      <ul>
-        <li class="minus">
-            Cash <span> -$400</span><button class="delete-btn">x</button>
-        </li>
-       </ul>
-       <h3>Add new transition</h3>
-       <form id="form">
-         <div class="form-control">
-            <lable for="Text">Text</lable>
-            <input type="text" id="text" placeholder="Enter Text....">
-         </div>
-         <div class="form-control">
-            <lable for="amount">Amount</lable>
-            <input type="number" id="amount" placeholder="Enter Amount....">
-         </div>
-         <button class="btn">All Trasactions</button>
-        </form>
+                            
+            </ul>
+          </div>
 
+          <!-- add transactions -->
 
-   </div>
+          <div class="transaction">
+            <h2 class="transaction-title">Add New Transaction</h2>
+            <form action="#" class="transaction-form" id="form">
+                <input type="text" id="text" class="for-text" placeholder="Insert Text Here(eg.salary)">
 
+            <input type="number" id="amount" class="for-amount" placeholder="Insert Text Here(eg.salary)">
+
+            <button>Add Transaction</button>
+            </form>
+            
+
+          </div>
+</div>
     
 </body>
 </html>
